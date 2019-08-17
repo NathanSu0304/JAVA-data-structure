@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f989516-c634-4293-8e10-54ac86a91c22" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BinarySortTree/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AVLTree/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AVLTree/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AVLTree/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AVLTree/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BinarySortTree/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BinarySortTree/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AVLTree/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+            <state relative-caret-position="135">
+              <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -32,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AVLTree/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="54" column="38" lean-forward="true" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+            <state relative-caret-position="352">
+              <caret line="139" column="20" selection-start-line="139" selection-start-column="20" selection-end-line="139" selection-end-column="20" />
               <folding>
                 <element signature="e#112#113#0" expanded="true" />
                 <element signature="e#146#147#0" expanded="true" />
@@ -45,7 +44,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AVLTree/AVLTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2385">
+            <state relative-caret-position="1720">
               <caret line="159" column="5" selection-start-line="159" selection-start-column="5" selection-end-line="159" selection-end-column="5" />
               <folding>
                 <element signature="e#106#107#0" expanded="true" />
@@ -71,14 +70,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/AVLTree/AVLTree.java" />
-        <option value="$PROJECT_DIR$/src/AVLTree/Node.java" />
         <option value="$PROJECT_DIR$/src/AVLTree/Main.java" />
+        <option value="$PROJECT_DIR$/src/AVLTree/Node.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="127" />
-    <option name="y" value="76" />
+    <option name="x" value="107" />
+    <option name="y" value="89" />
     <option name="width" value="1149" />
     <option name="height" value="793" />
   </component>
@@ -163,7 +162,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="127" y="76" width="1149" height="793" extended-state="0" />
+    <frame x="107" y="89" width="1149" height="793" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
@@ -198,7 +197,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/AVLTree/AVLTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2385">
+        <state relative-caret-position="1720">
           <caret line="159" column="5" selection-start-line="159" selection-start-column="5" selection-end-line="159" selection-end-column="5" />
           <folding>
             <element signature="e#106#107#0" expanded="true" />
@@ -209,15 +208,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AVLTree/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        <state relative-caret-position="135">
+          <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AVLTree/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="54" column="38" lean-forward="true" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+        <state relative-caret-position="352">
+          <caret line="139" column="20" selection-start-line="139" selection-start-column="20" selection-end-line="139" selection-end-column="20" />
           <folding>
             <element signature="e#112#113#0" expanded="true" />
             <element signature="e#146#147#0" expanded="true" />

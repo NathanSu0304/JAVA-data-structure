@@ -47,8 +47,6 @@ public class Node {
         }
         return 0;
     }
-
-
     //AVL中获取右子树高度的方法
     public int rightHeight(){
         if(this.right != null){
@@ -56,8 +54,38 @@ public class Node {
         }
         return 0;
     }
+    //构建左旋转方法
+    //如果左右子树高度差超过一，执行左旋转
+    public void leftRotate(){
+        //构建一个新结点，新结点的值为目前结点的值
+        Node newNode = new Node(value);
+        //将该结点的左子树给到新结点的左子树
+        newNode.left = left;
+        //将该结点的右子树的左子树给到新结点的右子树
+        newNode.right = right.left;
+        //将该结点的值置换成该结点右子结点的值
+        value = right.value;
+        //将该结点的右子树置换成右子树的右子树
+        right = right.right;
+        //将该结点的左子树置换成新结点
+        left = newNode;
+    }
 
-
+    //构建右旋转方法
+    public void rightRotate(){
+        //创建一个新结点, 其值等于该结点的值
+        Node newNode = new Node(value);
+        //令新结点的右子树等于该结点的右子树
+        newNode.right = right;
+        //令新结点的左子树等于该结点的左子树的右子树
+        newNode.left = left.right;
+        //令该结点的值等于其左子结点的值
+        value = left.value;
+        //令该结点的左子树为其左子树的左子树
+        left = left.left;
+        //令该结点的右子树为新结点
+        right = newNode;
+    }
 
 
     //构建一个add,加入一个结点
@@ -79,6 +107,37 @@ public class Node {
                 this.right.add(item);
             }
         }
+
+        //判断是否需要左旋
+        //如果右子树高度 - 左子树高度 > 1, 左旋
+        if(rightHeight() - leftHeight() > 1){
+
+            //如果该结点的右子树的左子树高度 > 该结点的右子树的右子树高度
+            //先将该结点的右子树进行右旋
+            if(right != null && right.leftHeight() > right.rightHeight()){
+                right.rightRotate();
+                leftRotate();
+            }
+            else
+            {
+                leftRotate();
+            }
+            return;//!!!
+        }
+        //如果左子树高度 - 右子树高低  > 1, 右旋
+        if(leftHeight() - rightHeight() > 1){
+            //如果该结点的左子树的右子树高度 > 该结点的左子树的左子树高度
+            //需要先将该结点的左子树进行左旋
+            if(left != null && left.rightHeight() > left.leftHeight()){
+                left.leftRotate();
+                rightRotate();
+            }
+            else{
+                rightRotate();
+            }
+
+        }
+        return;//!!!
     }
     //构建一个中序遍历的方法
     public void infixOrder(){
