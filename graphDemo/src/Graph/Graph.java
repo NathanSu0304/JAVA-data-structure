@@ -60,15 +60,16 @@ public class Graph {
     }
     //打印图对应的矩阵
     public void print(){
-//        for(int[] vertex: edges){//二维数组第一次遍历，出一个一维数组
-//            System.err.println(Arrays.toString(vertex));
-//        }
-        for(int i = 0; i < edges[0].length; i++){
-            for(int j = 0; j < edges[0].length;j++){
-                System.out.print(edges[i][j] + " ");
-            }
-            System.out.println();
+        for(int[] vertex: edges){//二维数组第一次遍历，出一个一维数组
+            System.err.println(Arrays.toString(vertex));
+//            System.out.println(Arrays.toString(vertex));
         }
+//        for(int i = 0; i < edges[0].length; i++){
+//            for(int j = 0; j < edges[0].length;j++){
+//                System.out.print(edges[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
     }
 
 }
