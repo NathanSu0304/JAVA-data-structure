@@ -13,13 +13,15 @@ public class Main {
 	    graph.print();
 	    //添加边
         //A-B A-C B-D B-E B-C
-        System.out.println("添加后～");
+//        System.out.println("添加后～");
         graph.insertEdges(0,1);
         graph.insertEdges(0,2);
         graph.insertEdges(1,2);
         graph.insertEdges(1,3);
         graph.insertEdges(1,4);
-        graph.print();
+        System.out.println(graph.getNumberOfVertex());
+
+        graph.dfs();
 
     }
 }
