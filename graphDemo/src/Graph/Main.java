@@ -20,8 +20,11 @@ public class Main {
         graph.insertEdges(1,3);
         graph.insertEdges(1,4);
         System.out.println(graph.getNumberOfVertex());
-
+        System.out.println("深度优先算法～");
         graph.dfs();
+        System.out.println();
+        System.out.println("广度优先算法～");
+        graph.bfs();
 
     }
 }

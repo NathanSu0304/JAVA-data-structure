@@ -2,6 +2,7 @@ package Graph;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 
 public class Graph {
     //图中需要储存顶点 String ArrayList
@@ -20,7 +21,7 @@ public class Graph {
         edges = new int[n][n];
         vertexList = new ArrayList<String>(n);
         numberOfEdges = 0;
-        isVisited = new boolean[n];
+
     }
 
     //添加顶点
@@ -149,11 +150,71 @@ public class Graph {
 
     //dfs 的重塑
     public void dfs(){
+        isVisited = new boolean[5];
         for(int i = 0; i < vertexList.size();i++){
             if(!isVisited[i]){//如果该点没有被访问过，就进去
                 dfs(isVisited,i);
             }
         }
     }
+
+    //广度优先算法
+    //传入一个点，打印该结点，将该点存入队列中（这里用LL）
+    //找出与之相连的所有结点，并把相连的所有点存入队列
+    //说明：需要使用队列来存放结点顺序，根据此顺序来横向遍历。
+    //A->B->C B->D->E比如传入A走到C 此时没有下一个结点了，弹出A，开始走B 与之相连的结点并存入LL
+
+    /**
+     *
+     * @param isVisited 数组判断所有结点是否已经遍历
+     * @param v 传入起始结点
+     */
+    private void bfs(boolean[] isVisited, int v){
+        //创建一个LL记录结点顺序
+        LinkedList queue = new LinkedList();
+        //先打印出第一个结点
+        System.out.print(getVertex(v) + "->");
+        //标记该结点以遍历
+        isVisited[v] = true;
+        //将这个结点加入到LL
+        queue.addLast(v);
+
+        //开始以队列的顺序开始广度遍历 ->开始真正遍历
+        while(!queue.isEmpty()){
+            //取出队列头结点
+            int u = (Integer)queue.removeFirst();
+            //找出与他相连接的所有结点并把他们加入到LL中
+            int w = getFirstNeighbour(u);
+            while(w != -1){//找到一个与之相连接的结点
+                if(!isVisited[w]){//如果该结点没有被访问过
+                    //打印出该结点，并把其标记为已访问
+                    if(w != getNumberOfVertex()-1){
+                        System.out.print(getVertex(w) + "->");
+                    }
+                    else{
+                        System.out.print(getVertex(w));
+                    }
+
+                    isVisited[w] = true;
+                    queue.addLast(w);
+                }
+                else{
+                    //如果该结点已经被访问过，就访问与头结点相连接的下一个结点（除w)
+                    w = getNextNeighbour(u,w);//体现广度优先
+                }
+            }
+        }
+    }
+
+    //重载bfs算法
+    public void bfs(){
+        isVisited = new boolean[5];
+        for(int i = 0; i< getNumberOfVertex();i++){
+            if(!isVisited[i]){
+                bfs(isVisited,i);
+            }
+        }
+    }
+
 
 }
